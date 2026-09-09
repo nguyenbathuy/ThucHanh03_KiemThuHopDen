@@ -91,3 +91,19 @@
 | TC6.4 | Biên không hợp lệ | n = 0       | Lỗi: n phải là số nguyên dương | Giá trị biên (Ngay dưới ranh giới hợp lệ) |
 | TC6.5 | Không hợp lệ      | n = -5      | Lỗi: n phải là số nguyên dương | Phân lớp tương đương (Số âm)              |
 | TC6.6 | Ngoại lệ          | n = "abc"   | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)               |
+
+## Bài 7: Tìm UCLN của a và b
+
+- **Đầu vào:** Hai số nguyên dương `a` và `b`.
+- **Đầu ra mong đợi:** Ước chung lớn nhất của hai số. Báo lỗi nếu dữ liệu không hợp lệ.
+- **Kỹ thuật áp dụng:** Phân lớp tương đương & Phân tích giá trị biên.
+
+| Mã TC | Loại dữ liệu      | Đầu vào (a, b) | Đầu ra mong đợi                     | Kỹ thuật kiểm thử / Kịch bản                      |
+| ----- | ----------------- | -------------- | ----------------------------------- | ------------------------------------------------- |
+| TC7.1 | Hợp lệ            | a=12, b=18     | 6                                   | Phân lớp tương đương (Trường hợp chung)           |
+| TC7.2 | Hợp lệ            | a=17, b=5      | 1                                   | Phân lớp tương đương (Hai số nguyên tố cùng nhau) |
+| TC7.3 | Hợp lệ            | a=15, b=15     | 15                                  | Phân lớp tương đương (Hai số bằng nhau)           |
+| TC7.4 | Biên hợp lệ       | a=1, b=10      | 1                                   | Giá trị biên (a nhỏ nhất có thể)                  |
+| TC7.5 | Biên không hợp lệ | a=0, b=8       | Lỗi: a và b phải là số nguyên dương | Giá trị biên (Biên dưới ranh giới hợp lệ)         |
+| TC7.6 | Không hợp lệ      | a=-4, b=12     | Lỗi: a và b phải là số nguyên dương | Phân lớp tương đương (Số âm)                      |
+| TC7.7 | Ngoại lệ          | a="x", b=5     | Lỗi: Đầu vào phải là số nguyên      | Dữ liệu ngoại lệ (Sai kiểu)                       |
