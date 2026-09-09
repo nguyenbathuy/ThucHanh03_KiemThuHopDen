@@ -107,3 +107,18 @@
 | TC7.5 | Biên không hợp lệ | a=0, b=8       | Lỗi: a và b phải là số nguyên dương | Giá trị biên (Biên dưới ranh giới hợp lệ)         |
 | TC7.6 | Không hợp lệ      | a=-4, b=12     | Lỗi: a và b phải là số nguyên dương | Phân lớp tương đương (Số âm)                      |
 | TC7.7 | Ngoại lệ          | a="x", b=5     | Lỗi: Đầu vào phải là số nguyên      | Dữ liệu ngoại lệ (Sai kiểu)                       |
+
+## Bài 8: Tính tổng các giai thừa ($S = 1! + 2! + ... + n!$)
+
+- **Đầu vào:** Số nguyên dương `n`.
+- **Đầu ra mong đợi:** Tổng của chuỗi giai thừa từ 1 đến n. Báo lỗi nếu dữ liệu không hợp lệ.
+- **Kỹ thuật áp dụng:** Phân lớp tương đương & Phân tích giá trị biên.
+
+| Mã TC | Loại dữ liệu      | Đầu vào (n) | Đầu ra mong đợi                | Kỹ thuật kiểm thử / Kịch bản                   |
+| ----- | ----------------- | ----------- | ------------------------------ | ---------------------------------------------- |
+| TC8.1 | Hợp lệ            | n=3         | 9                              | Phân lớp tương đương (n > 1: 1! + 2! + 3! = 9) |
+| TC8.2 | Hợp lệ            | n=4         | 33                             | Phân lớp tương đương (n > 1)                   |
+| TC8.3 | Biên hợp lệ       | n=1         | 1                              | Giá trị biên (n nhỏ nhất có thể)               |
+| TC8.4 | Biên không hợp lệ | n=0         | Lỗi: n phải là số nguyên dương | Giá trị biên (Ngay dưới ranh giới hợp lệ)      |
+| TC8.5 | Không hợp lệ      | n=-2        | Lỗi: n phải là số nguyên dương | Phân lớp tương đương (Số âm)                   |
+| TC8.6 | Ngoại lệ          | n="abc"     | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)                    |
