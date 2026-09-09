@@ -61,3 +61,18 @@
 | TC4.5 | Không hợp lệ | thang=0, nam=2023    | Lỗi: Tháng phải từ 1 đến 12    | Giá trị biên (Biên dưới của tháng)              |
 | TC4.6 | Không hợp lệ | thang=13, nam=2023   | Lỗi: Tháng phải từ 1 đến 12    | Giá trị biên (Biên trên của tháng)              |
 | TC4.7 | Ngoại lệ     | thang=5.5, nam=2023  | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)                     |
+
+## Bài 5: Kiểm tra số nguyên tố
+
+- **Đầu vào:** Số nguyên `n`.
+- **Đầu ra mong đợi:** Kết luận "Là số nguyên tố" hoặc "Không phải số nguyên tố". Báo lỗi nếu dữ liệu sai.
+- **Kỹ thuật áp dụng:** Phân lớp tương đương & Phân tích giá trị biên.
+
+| Mã TC | Loại dữ liệu      | Đầu vào (n) | Đầu ra mong đợi                | Kỹ thuật kiểm thử / Kịch bản                    |
+| ----- | ----------------- | ----------- | ------------------------------ | ----------------------------------------------- |
+| TC5.1 | Hợp lệ            | n = 7       | Là số nguyên tố                | Phân lớp tương đương (Số nguyên tố)             |
+| TC5.2 | Hợp lệ            | n = 9       | Không phải số nguyên tố        | Phân lớp tương đương (Hợp số)                   |
+| TC5.3 | Biên hợp lệ       | n = 2       | Là số nguyên tố                | Giá trị biên (Số nguyên tố nhỏ nhất)            |
+| TC5.4 | Biên không hợp lệ | n = 1       | Không phải số nguyên tố        | Giá trị biên (Ngay dưới ranh giới số nguyên tố) |
+| TC5.5 | Không hợp lệ      | n = -3      | Lỗi: n phải là số tự nhiên > 1 | Phân lớp tương đương (Số âm)                    |
+| TC5.6 | Ngoại lệ          | n = "5.5"   | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)                     |
