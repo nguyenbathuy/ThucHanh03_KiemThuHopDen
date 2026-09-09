@@ -43,3 +43,21 @@
 | TC3.5 | Biên hợp lệ  | a=0, b=0, c=5     | Vô nghiệm               | Biên $a=0, b=0, c \neq 0$                     |
 | TC3.6 | Biên hợp lệ  | a=0, b=0, c=0     | Vô số nghiệm            | Biên $a=0, b=0, c=0$                          |
 | TC3.7 | Ngoại lệ     | a="x", b=2, c=1   | Lỗi: Đầu vào phải là số | Dữ liệu ngoại lệ (Sai kiểu)                   |
+
+## Bài 4: Tính số ngày của một tháng
+
+- **Đầu vào:** `thang`, `nam` (kiểu số nguyên).
+- **Đầu ra mong đợi:** Số ngày của tháng đó (28, 29, 30 hoặc 31 ngày). Báo lỗi nếu dữ liệu sai.
+- **Kỹ thuật áp dụng:** Phân lớp tương đương & Phân tích giá trị biên.
+  - Lớp hợp lệ: Tháng thuộc {1,3,5,7,8,10,12} (31 ngày), {4,6,9,11} (30 ngày), {2} (28/29 ngày tuỳ năm nhuận).
+  - Lớp không hợp lệ: Tháng < 1 hoặc Tháng > 12. Năm < 1.
+
+| Mã TC | Loại dữ liệu | Đầu vào (tháng, năm) | Đầu ra mong đợi                | Kỹ thuật kiểm thử / Kịch bản                    |
+| ----- | ------------ | -------------------- | ------------------------------ | ----------------------------------------------- |
+| TC4.1 | Hợp lệ       | thang=1, nam=2023    | 31                             | Phân lớp tương đương (Tháng có 31 ngày)         |
+| TC4.2 | Hợp lệ       | thang=4, nam=2023    | 30                             | Phân lớp tương đương (Tháng có 30 ngày)         |
+| TC4.3 | Hợp lệ       | thang=2, nam=2024    | 29                             | Phân lớp tương đương (Tháng 2, năm nhuận)       |
+| TC4.4 | Hợp lệ       | thang=2, nam=2023    | 28                             | Phân lớp tương đương (Tháng 2, năm không nhuận) |
+| TC4.5 | Không hợp lệ | thang=0, nam=2023    | Lỗi: Tháng phải từ 1 đến 12    | Giá trị biên (Biên dưới của tháng)              |
+| TC4.6 | Không hợp lệ | thang=13, nam=2023   | Lỗi: Tháng phải từ 1 đến 12    | Giá trị biên (Biên trên của tháng)              |
+| TC4.7 | Ngoại lệ     | thang=5.5, nam=2023  | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)                     |
