@@ -76,3 +76,18 @@
 | TC5.4 | Biên không hợp lệ | n = 1       | Không phải số nguyên tố        | Giá trị biên (Ngay dưới ranh giới số nguyên tố) |
 | TC5.5 | Không hợp lệ      | n = -3      | Lỗi: n phải là số tự nhiên > 1 | Phân lớp tương đương (Số âm)                    |
 | TC5.6 | Ngoại lệ          | n = "5.5"   | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)                     |
+
+## Bài 6: Tính tổng đan dấu ($S = 1 - 2 + 3 - 4 + ...$)
+
+- **Đầu vào:** Số nguyên dương `n`.
+- **Đầu ra mong đợi:** Giá trị tổng S (Số lẻ cộng, số chẵn trừ). Báo lỗi nếu dữ liệu sai.
+- **Kỹ thuật áp dụng:** Phân lớp tương đương & Phân tích giá trị biên.
+
+| Mã TC | Loại dữ liệu      | Đầu vào (n) | Đầu ra mong đợi                | Kỹ thuật kiểm thử / Kịch bản              |
+| ----- | ----------------- | ----------- | ------------------------------ | ----------------------------------------- |
+| TC6.1 | Hợp lệ            | n = 4       | -2                             | Phân lớp tương đương (n chẵn: 1-2+3-4)    |
+| TC6.2 | Hợp lệ            | n = 5       | 3                              | Phân lớp tương đương (n lẻ: 1-2+3-4+5)    |
+| TC6.3 | Biên hợp lệ       | n = 1       | 1                              | Giá trị biên (n nhỏ nhất có thể)          |
+| TC6.4 | Biên không hợp lệ | n = 0       | Lỗi: n phải là số nguyên dương | Giá trị biên (Ngay dưới ranh giới hợp lệ) |
+| TC6.5 | Không hợp lệ      | n = -5      | Lỗi: n phải là số nguyên dương | Phân lớp tương đương (Số âm)              |
+| TC6.6 | Ngoại lệ          | n = "abc"   | Lỗi: Đầu vào phải là số nguyên | Dữ liệu ngoại lệ (Sai kiểu)               |
